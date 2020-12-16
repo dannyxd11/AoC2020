@@ -68,7 +68,6 @@ while col < width:
 
 mm = np.array(match_matrix)
 solution_found = False
-# print(np.array2string(mm, max_line_width=np.inf))
 
 while not solution_found:
     for i in range(0, width):        
