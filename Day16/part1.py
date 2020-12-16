@@ -8,7 +8,6 @@ def parse_rule(line):
 def determine_gaps(rules):
     return list(set([n for ns in [list(range(rule[1], rule[2]+1)) + list(range(rule[3], rule[4]+1)) for rule in rules] for n in ns]))
 
-
 def load_file(filename):
     with open('challenge.txt', 'r') as f:
         lines = [x.strip() for x in f.readlines() if x.strip() != ""]
