@@ -35,7 +35,8 @@ def process_click(cubes):
     ncubes = copy.deepcopy(cubes)
     for kcube, vcube in cubes.items():
         ncubes = update_cubes(kcube, ncubes)
-    out = copy.deepcopy(cubes)
+        
+    out = copy.deepcopy(ncubes)
     for kcube, vcube in ncubes.items():             
         adjacent_active_cubes = get_active_cubes(kcube, ncubes)
 
@@ -45,7 +46,6 @@ def process_click(cubes):
             out[kcube] = ACTIVE
     return out
 
-
 #### 
 
 with open('challenge.txt', 'r') as f:
@@ -54,6 +54,6 @@ with open('challenge.txt', 'r') as f:
 
 for step in range(1, 7): 
     cubes = process_click(cubes)        
-    print("Part 1: Step %s - %s active cubes" % (step, len(filter_active_cubes(cubes).items())))
+    print("Part 2: Step %s - %s active cubes" % (step, len(filter_active_cubes(cubes).items())))
 
 
