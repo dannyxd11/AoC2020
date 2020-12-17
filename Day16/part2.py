@@ -69,6 +69,7 @@ while col < width:
 mm = np.array(match_matrix)
 solution_found = False
 
+# Could enter infinite loop if theres branching so it doesn't solve.. but hey
 while not solution_found:
     for i in range(0, width):        
         unique, counts = np.unique(mm, return_counts=True)
